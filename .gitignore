@@ -1,0 +1,10 @@
+node_modules/
+dist/
+coverage/
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
+api/private_uploads/prospectos/*
+!api/private_uploads/prospectos/.htaccess

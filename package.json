@@ -1,0 +1,29 @@
+{
+  "name": "mochilasoft-landing",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n API,VITE \"npm:api:dev\" \"npm:dev:frontend\"",
+    "dev:frontend": "vite",
+    "api": "node api/server.js",
+    "api:dev": "node --watch api/server.js",
+    "admin:create": "node api/create-admin.js",
+    "db:setup": "node api/setup-db.js",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
+    "multer": "^2.4.0",
+    "pg": "^8.23.1",
+    "vite": "^6.0.5",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6"
+  }
+}
